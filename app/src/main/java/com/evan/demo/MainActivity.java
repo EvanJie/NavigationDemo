@@ -17,17 +17,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         NavHostFragment finalHost = NavHostFragment.create(R.navigation.mobile_navigation);
-//        getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.nav_host, finalHost)
-//                .setPrimaryNavigationFragment(finalHost) // this is the equivalent to app:defaultNavHost="true"
-//                .commit();
-
-        Navigation.findNavController(this, R.id.my_nav_host_fragment).addOnNavigatedListener(new NavController.OnNavigatedListener() {
-            @Override
-            public void onNavigated(@NonNull NavController controller, @NonNull NavDestination destination) {
-                destination.getLabel();
-            }
-        });
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.my_nav_host_fragment, finalHost)
+                .setPrimaryNavigationFragment(finalHost) // this is the equivalent to app:defaultNavHost="true"
+                .commit();
+//        Navigation.findNavController(this, R.id.my_nav_host_fragment).addOnNavigatedListener(new NavController.OnNavigatedListener() {
+//            @Override
+//            public void onNavigated(@NonNull NavController controller, @NonNull NavDestination destination) {
+//                destination.getLabel();
+//            }
+//        });
 
     }
 
