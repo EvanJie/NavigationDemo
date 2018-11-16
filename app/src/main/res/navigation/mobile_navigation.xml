@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.evan.demo.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.evan.demo.FragmentA"
+        android:label="a_fragment"
+        tools:layout="@layout/a_fragment" >
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+        android:name="com.evan.demo.FragmentC"
+        android:label="c_fragment"
+        tools:layout="@layout/c_fragment" />
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.evan.demo.FragmentB"
+        android:label="b_fragment"
+        tools:layout="@layout/b_fragment" >
+        <action
+            android:id="@+id/action_fragmentB_to_homeFragment"
+             app:popUpTo="@id/homeFragment"/>
+    </fragment>
+</navigation>

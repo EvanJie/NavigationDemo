@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EvanDemo</string>
+    <string name="home">Home</string>
+    <string name="a_fragment_text">AAAA</string>
+    <string name="b_fragment_text">BBBB</string>
+    <string name="c_fragment_text">CCCC</string>
+    <string name="next_step_button">Navigate next step</string>
+    <string name="navigate_destination_button">Navigate to destination</string>
+    <string name="navigate_action_button">Navigate with action</string>
+</resources>
